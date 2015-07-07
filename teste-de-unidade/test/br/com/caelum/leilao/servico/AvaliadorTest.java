@@ -1,4 +1,4 @@
-package br.com.caelum.leilao.teste;
+package br.com.caelum.leilao.servico;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -9,7 +9,7 @@ import br.com.caelum.leilao.dominio.Usuario;
 import br.com.caelum.leilao.servico.Avaliador;
 
 
-public class TesteDoAvaliador {
+public class AvaliadorTest {
 	@Test
 	public void deveEntenderLancesEmOrdemCrescente() {
 		// parte 1: cenario
