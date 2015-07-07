@@ -1,12 +1,13 @@
 package br.com.caelum.leilao.teste;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import br.com.caelum.leilao.dominio.Lance;
 import br.com.caelum.leilao.dominio.Leilao;
 import br.com.caelum.leilao.dominio.Usuario;
 import br.com.caelum.leilao.servico.Avaliador;
-import junit.framework.Assert;
+
 
 public class TesteDoAvaliador {
 	@Test
