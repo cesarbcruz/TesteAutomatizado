@@ -77,7 +77,7 @@ public class AvaliadorTest {
 	public void deveEncontrarOsTresMaioresLances(){
 		Usuario joao = new Usuario("João");
 		Usuario maria = new Usuario("Maria");
-		Leilao leilao = new Leilao("Vazo");
+		Leilao leilao = new Leilao("Tablet");
 		leilao.propoe(new Lance(joao, 100.0));
 		leilao.propoe(new Lance(maria, 200.0));
 		leilao.propoe(new Lance(joao, 300.0));
