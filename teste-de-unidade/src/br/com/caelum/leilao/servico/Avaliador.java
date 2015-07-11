@@ -21,4 +21,13 @@ public class Avaliador {
 	public double getMenorLance() {
 		return menorDeTodos;
 	}
+	
+	public double getValorMedioLance(Leilao leilao){
+		double valorTotalLance = 0D;
+		int qtdeLance = leilao.getLances().size();
+		for(Lance lance : leilao.getLances()){
+			valorTotalLance+=lance.getValor();
+		}
+		return valorTotalLance/qtdeLance;
+	}
 }

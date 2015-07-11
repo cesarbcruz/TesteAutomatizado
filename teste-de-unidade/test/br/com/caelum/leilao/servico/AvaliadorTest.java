@@ -32,6 +32,32 @@ public class AvaliadorTest {
 		
 		Assert.assertEquals(maiorEsperado, leiloeiro.getMaiorLance(), 0.00001);
 		Assert.assertEquals(menorEsperado, leiloeiro.getMenorLance(), 0.00001);
+		
+	}
+	
+	@Test
+	public void calcularValorMediaDosLances() {
+		// parte 1: cenario
+		Usuario pedro = new Usuario("Pedro");
+		Usuario aline = new Usuario("Aline");
+		Usuario cesar = new Usuario("Cesar");
+		
+		Leilao leilao = new Leilao("Pintura Leonardo da Vinci");
+		
+		Lance lanceCesar = new Lance(cesar, 300.0);
+		leilao.propoe(lanceCesar);
+		Lance lanceAline = new Lance(aline, 800.0);
+		leilao.propoe(lanceAline);
+		Lance lancePedro = new Lance(pedro, 699.0);
+		leilao.propoe(lancePedro);
+
+		// parte 2: acao		
+		Avaliador leiloeiro = new Avaliador();
+		double valorMedioCalculado = leiloeiro.getValorMedioLance(leilao);
+
+		// parte 3: validacao		
+		double valorMedioEsperado = (lanceCesar.getValor()+lanceAline.getValor()+lancePedro.getValor())/3;
+		Assert.assertEquals(valorMedioEsperado, valorMedioCalculado, 0.00001);
 	}
 }
 
