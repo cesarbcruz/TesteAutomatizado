@@ -24,4 +24,5 @@ public class PalindromoTest {
 		boolean resultado = p.ehPalindromo("E preciso amar as pessoas como se nao houvesse amanha");
 		Assert.assertFalse(resultado);
 	}
+	
 }
