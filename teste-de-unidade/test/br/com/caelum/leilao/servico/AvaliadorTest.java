@@ -94,13 +94,14 @@ public class AvaliadorTest {
 	@Test
 	public void deveEntenderLeilaoComValorLanceAleatorio() {
 		Usuario joao = new Usuario("João");
+		Usuario pedro = new Usuario("Pedro");
 		Leilao leilao = new Leilao("Tapete");
 		leilao.propoe(new Lance(joao, 200.0));
-		leilao.propoe(new Lance(joao, 450.0));
+		leilao.propoe(new Lance(pedro, 450.0));
 		leilao.propoe(new Lance(joao, 120.0));
-		leilao.propoe(new Lance(joao, 700.0));
+		leilao.propoe(new Lance(pedro, 700.0));
 		leilao.propoe(new Lance(joao, 630.0));
-		leilao.propoe(new Lance(joao, 230.0));
+		leilao.propoe(new Lance(pedro, 230.0));
 
 		Avaliador leiloeiro = new Avaliador();
 		leiloeiro.avalia(leilao);
@@ -111,11 +112,12 @@ public class AvaliadorTest {
 	@Test
 	public void deveEntenderLeilaoComValorLanceOrdemDecrescente() {
 		Usuario joao = new Usuario("João");
+		Usuario pedro = new Usuario("Pedro");
 		Leilao leilao = new Leilao("Tapete");
 		leilao.propoe(new Lance(joao, 400.0));
-		leilao.propoe(new Lance(joao, 300.0));
+		leilao.propoe(new Lance(pedro, 300.0));
 		leilao.propoe(new Lance(joao, 200.0));
-		leilao.propoe(new Lance(joao, 100.0));
+		leilao.propoe(new Lance(pedro, 100.0));
 
 		Avaliador leiloeiro = new Avaliador();
 		leiloeiro.avalia(leilao);

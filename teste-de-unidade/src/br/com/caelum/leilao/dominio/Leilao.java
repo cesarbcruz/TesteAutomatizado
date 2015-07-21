@@ -2,6 +2,7 @@ package br.com.caelum.leilao.dominio;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 public class Leilao {
@@ -22,10 +23,10 @@ public class Leilao {
 	}
 
 	private boolean podeDarLance(Usuario usuario) {
-		return !ultimoLanceDado().getUsuario().equals(usuario) && LancesDo(usuario)< 5;
+		return !ultimoLanceDado().getUsuario().equals(usuario) && quantidadeLanceDo(usuario)< 5;
 	}
 
-	private int LancesDo(Usuario usuario) {
+	private int quantidadeLanceDo(Usuario usuario) {
 		int total = 0;
 		for (Lance l : lances) {
 			if(l.getUsuario().equals(usuario)) total++;
@@ -45,6 +46,18 @@ public class Leilao {
 		return Collections.unmodifiableList(lances);
 	}
 
-	
-	
+	public void dobraLance(Usuario usuario) {
+		Lance ultimoLance = ultimoLanceDo(usuario);
+		if(ultimoLance!=null){
+			propoe(new Lance(usuario, ultimoLance.getValor()*2));
+		}
+	}
+
+	private Lance ultimoLanceDo(Usuario usuario) {
+		Lance ultimoLance = null;
+		for (Lance l : lances) {
+			if(l.getUsuario().equals(usuario)) ultimoLance = l;
+		}
+		return ultimoLance;
+	}
 }

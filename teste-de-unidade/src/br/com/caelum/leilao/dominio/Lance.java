@@ -18,6 +18,8 @@ public class Lance {
 		return valor;
 	}
 	
-	
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
 	
 }

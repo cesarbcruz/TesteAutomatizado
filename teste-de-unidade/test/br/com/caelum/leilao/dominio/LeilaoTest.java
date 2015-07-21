@@ -65,5 +65,29 @@ public class LeilaoTest {
 		
 		
 	}
+	
+	@Test
+	public void dobraLance(){
+		Usuario cesar = new Usuario("Cesar");
+		Usuario jose = new Usuario("Jose");
+		Leilao leilao = new Leilao("Camaro Amarelo");
+		leilao.propoe(new Lance(cesar, 50000.0));
+		leilao.propoe(new Lance(jose, 55000.0));
+		leilao.dobraLance(cesar);
+		assertEquals(3, leilao.getLances().size());
+		assertEquals(55000.0, leilao.getLances().get(1).getValor(), 0.00001);
+		assertEquals(100000.0, leilao.getLances().get(2).getValor(), 0.00001);
+	}
+	
+	@Test
+	public void dobraLanceSemNenhumLanceAnterior(){
+		Usuario cesar = new Usuario("Cesar");
+		Usuario jose = new Usuario("Jose");
+		Leilao leilao = new Leilao("Camaro Amarelo");
+		leilao.propoe(new Lance(jose, 55000.0));
+		leilao.dobraLance(cesar);
+		assertEquals(1, leilao.getLances().size());
+		assertEquals(55000.0, leilao.getLances().get(0).getValor(), 0.00001);		
+	}
 }
 
