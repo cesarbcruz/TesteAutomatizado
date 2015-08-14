@@ -1,0 +1,13 @@
+package br.com.caelum.leilao.servico;
+
+import java.util.Calendar;
+
+import org.junit.Test;
+
+public class EncerradorDeLeilaoTest {
+	@Test
+	public void deveEncerrarLeiloesQueComecaramUmaSemanaAntes(){
+		Calendar antiga = Calendar.getInstance();
+		
+	}
+}

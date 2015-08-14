@@ -1,0 +1,22 @@
+package br.com.caelum.leilao.servico;
+
+import java.util.Calendar;
+
+import org.junit.Test;
+import static org.junit.Assert.assertTrue;
+
+import br.com.caelum.leilao.builder.CriadorDeLeilao;
+import br.com.caelum.leilao.dominio.Leilao;
+
+public class EncerradorDeLeilaoTest {
+	@Test
+	public void deveEncerrarLeiloesQueComecaramUmaSemanaAntes(){
+		Calendar antiga = Calendar.getInstance();
+		antiga.set(1999, 1, 20);
+		Leilao lailao1 = new CriadorDeLeilao().para("TV de plasma").naData(antiga).constroi();
+		Leilao lailao2 = new CriadorDeLeilao().para("Geladeira").naData(antiga).constroi();
+		EncerradorDeLeilao encerrador = new EncerradorDeLeilao();
+		encerrador.encerra();
+		assertTrue(leilao1.isEncerrado());
+	}
+}

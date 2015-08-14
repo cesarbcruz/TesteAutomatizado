@@ -1,0 +1,14 @@
+create database mocks;
+use mocks;
+create table LEILAO()
+ID integer autoincrement;
+DESCRICAO text,
+DATA date,
+ENCERRADO boolean
+);
+create table LANCES(
+LEILAO_ID integer,
+USUARIO_ID integer,
+VALOR double
+);
+create table USUARIO( ID int not null auto_increment primary key, NOME text );

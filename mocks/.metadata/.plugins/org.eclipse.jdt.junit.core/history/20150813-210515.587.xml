@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="teste-de-unidade" project="teste-de-unidade" tests="11" started="11" failures="0" errors="0" ignored="0">
+  <testsuite name="br.com.caelum.leilao.dominio.LeilaoTest" time="0.0">
+    <testcase name="deveReceberVariosLances" classname="br.com.caelum.leilao.dominio.LeilaoTest" time="0.0"/>
+    <testcase name="deveReceberUmLance" classname="br.com.caelum.leilao.dominio.LeilaoTest" time="0.0"/>
+    <testcase name="naoDeveAceitarMaisDoQue5LancesDeUmMesmoUsuario" classname="br.com.caelum.leilao.dominio.LeilaoTest" time="0.0"/>
+    <testcase name="naoDeveAceitarDoisLancesSeguidosDoMesmoUsuario" classname="br.com.caelum.leilao.dominio.LeilaoTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="br.com.caelum.leilao.servico.AvaliadorTest" time="0.0">
+    <testcase name="naoDeveAvaliarLeiloesSemNenhumLanceDado" classname="br.com.caelum.leilao.servico.AvaliadorTest" time="0.0"/>
+    <testcase name="deveEncontrarOsTresMaioresLances" classname="br.com.caelum.leilao.servico.AvaliadorTest" time="0.0"/>
+    <testcase name="deveEntenderLancesEmOrdemCrescente" classname="br.com.caelum.leilao.servico.AvaliadorTest" time="0.0"/>
+    <testcase name="deveEntenderLeilaoComApenasUmLance" classname="br.com.caelum.leilao.servico.AvaliadorTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="br.com.caelum.leilao.servico.EncerradorDeLeilaoTest" time="0.295">
+    <testcase name="naoDeveEncerrarLeiloesCasoNaoHajaNenhum" classname="br.com.caelum.leilao.servico.EncerradorDeLeilaoTest" time="0.209"/>
+    <testcase name="naodeveEncerrarLeiloesQueComecaramOntem" classname="br.com.caelum.leilao.servico.EncerradorDeLeilaoTest" time="0.003"/>
+    <testcase name="deveEncerrarLeiloesQueComecaramUmaSemanaAntes" classname="br.com.caelum.leilao.servico.EncerradorDeLeilaoTest" time="0.083"/>
+  </testsuite>
+</testrun>

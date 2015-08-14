@@ -1,0 +1,15 @@
+create database mocks;
+use mocks;
+create table LEILAO()
+DESCRICAO text,
+DATA date,
+ENCERRADO boolean
+);
+create table LANCES(
+LEILAO_ID integer,
+USUARIO_ID integer,
+VALOR double
+);
+create table USUARIO(
+
+);
