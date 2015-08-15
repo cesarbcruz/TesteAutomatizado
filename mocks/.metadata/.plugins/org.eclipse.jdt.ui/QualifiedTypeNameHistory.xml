@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.junit.Test"/>
-<fullyQualifiedTypeName name="java.util.Calendar"/>
-<fullyQualifiedTypeName name="br.com.caelum.leilao.builder.CriadorDeLeilao"/>
 <fullyQualifiedTypeName name="br.com.caelum.leilao.servico.EncerradorDeLeilaoTest"/>
 <fullyQualifiedTypeName name="br.com.caelum.leilao.servico.EncerradorDeLeilao"/>
 <fullyQualifiedTypeName name="org.junit.Assert"/>
 <fullyQualifiedTypeName name="br.com.caelum.leilao.infra.dao.LeilaoDaoFalso"/>
 <fullyQualifiedTypeName name="org.mockito.Mock"/>
-<fullyQualifiedTypeName name="org.mockito.Mockito"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="br.com.caelum.leilao.infra.dao.LeilaoDao"/>
 <fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
-<fullyQualifiedTypeName name="br.com.caelum.leilao.dominio.Leilao"/>
+<fullyQualifiedTypeName name="org.mockito.internal.verification.Times"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
 <fullyQualifiedTypeName name="br.com.caelum.leilao.infra.dao.RepositorioDeLeiloes"/>
+<fullyQualifiedTypeName name="br.com.caelum.leilao.builder.CriadorDeLeilao"/>
+<fullyQualifiedTypeName name="br.com.caelum.leilao.dominio.Usuario"/>
+<fullyQualifiedTypeName name="org.mockito.Mockito"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="org.mockito.ArgumentCaptor"/>
+<fullyQualifiedTypeName name="br.com.caelum.leilao.dominio.Leilao"/>
+<fullyQualifiedTypeName name="br.com.caelum.leilao.servico.Avaliador"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
 </qualifiedTypeNameHistroy>
