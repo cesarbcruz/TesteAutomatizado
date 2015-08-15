@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="EncerradorDeLeilaoTest" project="teste-de-unidade" tests="9" started="9" failures="0" errors="0" ignored="0">
+  <testsuite name="br.com.caelum.leilao.servico.EncerradorDeLeilaoTest" time="0.356">
+    <testcase name="naoDeveEncerrarLeiloesCasoNaoHajaNenhum" classname="br.com.caelum.leilao.servico.EncerradorDeLeilaoTest" time="0.16"/>
+    <testcase name="deveContinuarAExecucaoMesmoQuandoEnviadorDeEmaillFalha" classname="br.com.caelum.leilao.servico.EncerradorDeLeilaoTest" time="0.081"/>
+    <testcase name="deveEnviarEmailAposAtualizarLeiloesEncerrados" classname="br.com.caelum.leilao.servico.EncerradorDeLeilaoTest" time="0.035"/>
+    <testcase name="naodeveEncerrarLeiloesQueComecaramOntem" classname="br.com.caelum.leilao.servico.EncerradorDeLeilaoTest" time="0.002"/>
+    <testcase name="naoDeveEncerrarLeiloesQueComecaramMenosDeUmaSemanaAtras" classname="br.com.caelum.leilao.servico.EncerradorDeLeilaoTest" time="0.013"/>
+    <testcase name="deveEncerrarLeiloesQueComecaramUmaSemanaAntes" classname="br.com.caelum.leilao.servico.EncerradorDeLeilaoTest" time="0.014"/>
+    <testcase name="nuncaDeveEnviarEmailSeOcorrerFalhaNoDaoDeTodosLeiloes" classname="br.com.caelum.leilao.servico.EncerradorDeLeilaoTest" time="0.024"/>
+    <testcase name="deveAtualizarLeiloesEncerrados" classname="br.com.caelum.leilao.servico.EncerradorDeLeilaoTest" time="0.009"/>
+    <testcase name="deveContinuarAExecucaoMesmoQuandoDaoFalha" classname="br.com.caelum.leilao.servico.EncerradorDeLeilaoTest" time="0.017"/>
+  </testsuite>
+</testrun>
