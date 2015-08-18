@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="UsuarioDaoTest" project="pm73-dao" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="br.com.caelum.pm73.dao.UsuarioDaoTest" time="1.772">
+    <testcase name="deveEncontrarPeloNomeEEmail" classname="br.com.caelum.pm73.dao.UsuarioDaoTest" time="1.761"/>
+    <testcase name="deveRetornarNuloSeNaoEncontrarUsuario" classname="br.com.caelum.pm73.dao.UsuarioDaoTest" time="0.011"/>
+  </testsuite>
+</testrun>
