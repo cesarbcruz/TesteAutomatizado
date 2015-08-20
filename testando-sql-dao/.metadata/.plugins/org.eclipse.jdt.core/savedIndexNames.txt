@@ -5,8 +5,8 @@ INDEX VERSION 1.127+/home/cesar/Alura/testeAutomatizado/testando-sql-dao/.metada
 1449148651.index
 3500938655.index
 382581797.index
-3510019475.index
 1495754104.index
+3510019475.index
 3089987296.index
 4076869792.index
 1666187487.index
@@ -14,10 +14,11 @@ INDEX VERSION 1.127+/home/cesar/Alura/testeAutomatizado/testando-sql-dao/.metada
 3561354439.index
 908787605.index
 3655297846.index
-1731853517.index
 2941244414.index
+1731853517.index
 274627095.index
 2055928024.index
+2772332699.index
 3991125500.index
 3202556442.index
 2151209264.index

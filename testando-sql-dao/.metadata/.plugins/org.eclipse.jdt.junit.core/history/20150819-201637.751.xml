@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="LeilaoDaoTests" project="pm73-dao" tests="7" started="7" failures="0" errors="0" ignored="0">
+  <testsuite name="br.com.caelum.pm73.dao.LeilaoDaoTests" time="2.169">
+    <testcase name="deveTrazerLeiloesNaoEncerradosNoPeriodo" classname="br.com.caelum.pm73.dao.LeilaoDaoTests" time="1.827"/>
+    <testcase name="deveRetornarLeiloesNaoUsados" classname="br.com.caelum.pm73.dao.LeilaoDaoTests" time="0.063"/>
+    <testcase name="deveRetornarLeiloesCriadosExatamenteAumaSemana" classname="br.com.caelum.pm73.dao.LeilaoDaoTests" time="0.067"/>
+    <testcase name="naoDeveTrazerLeiloesEncerradosNoPeriodo" classname="br.com.caelum.pm73.dao.LeilaoDaoTests" time="0.055"/>
+    <testcase name="deveContarZeroParaLeiloesEncerrados" classname="br.com.caelum.pm73.dao.LeilaoDaoTests" time="0.056"/>
+    <testcase name="deveContarLeiloesNaoEncerrados" classname="br.com.caelum.pm73.dao.LeilaoDaoTests" time="0.056"/>
+    <testcase name="deveTrazerSomenteLeiloesAntigosHaMaisDe7Dias" classname="br.com.caelum.pm73.dao.LeilaoDaoTests" time="0.045"/>
+  </testsuite>
+</testrun>
