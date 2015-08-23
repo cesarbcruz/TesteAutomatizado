@@ -1,7 +1,6 @@
 package br.com.caelum.pm73.dao;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 import org.hibernate.Session;
 import org.junit.After;
@@ -52,5 +51,50 @@ public class UsuarioDaoTest {
                 .porNomeEEmail("João Joaquim", "joao@joaquim.com.br");
 
         assertNull(usuarioDoBanco);
+    }
+    
+    @Test
+    public void deveDeletarUmUsuario() {
+        Usuario usuario = 
+                new Usuario("Mauricio Aniche", "mauricio@aniche.com.br");
+
+        usuarioDao.salvar(usuario);
+        usuarioDao.deletar(usuario);
+        
+        // envia tudo para o banco de dados        
+        session.flush();
+        session.clear();
+
+        Usuario usuarioNoBanco = 
+                usuarioDao.porNomeEEmail("Mauricio Aniche", "mauricio@aniche.com.br");
+
+        assertNull(usuarioNoBanco);
+
+    }
+    
+    @Test
+    public void deveAlterarUmUsuario() {
+        Usuario usuario = 
+                new Usuario("Mauricio Aniche", "mauricio@aniche.com.br");
+
+        usuarioDao.salvar(usuario);
+        usuario.setNome("Cesar Cruz");
+        usuario.setEmail("cesar@cruz");
+        usuarioDao.atualizar(usuario);
+        
+        // envia tudo para o banco de dados        
+        session.flush();
+        session.clear();
+
+        Usuario usuarioNoBanco = 
+                usuarioDao.porNomeEEmail("Mauricio Aniche", "mauricio@aniche.com.br");
+
+        assertNull(usuarioNoBanco);
+        
+        usuarioNoBanco = 
+                usuarioDao.porNomeEEmail("Cesar Cruz", "cesar@cruz");
+
+        assertNotNull(usuarioNoBanco);
+
     }
 }

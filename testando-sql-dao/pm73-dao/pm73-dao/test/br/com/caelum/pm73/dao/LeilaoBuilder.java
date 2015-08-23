@@ -79,5 +79,4 @@ public class LeilaoBuilder {
 		}
         return leilao;
     }
-
 }

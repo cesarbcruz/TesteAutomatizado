@@ -302,8 +302,7 @@ public class LeilaoDaoTests {
 		assertEquals(1, leiloes.size());
 		assertEquals(leilao, leiloes.get(0));
 	}
-	
-	
+
 	@Test
 	public void deveTrazerValorMedioDosLancesIniciaisDoUsuario() {
 
@@ -329,6 +328,23 @@ public class LeilaoDaoTests {
 		double valorMedioLance = leilaoDao.getValorInicialMedioDoUsuario(mauricio);
 
 		// garantindo que a query funcionou
-		assertEquals((leilao1.getValorInicial()+leilao2.getValorInicial())/2, valorMedioLance,0.0001);
+		assertEquals((leilao1.getValorInicial() + leilao2.getValorInicial()) / 2, valorMedioLance, 0.0001);
+	}
+
+	@Test
+	public void deveDeletarUmLeilao() {
+		Usuario mauricio = new Usuario("Mauricio", "m@a.com");
+		Leilao leilao = new LeilaoBuilder().comDono(mauricio).comLance(Calendar.getInstance(), mauricio, 10000.0)
+				.constroi();
+
+		usuarioDao.salvar(mauricio);
+		leilaoDao.salvar(leilao);
+
+		session.flush();
+
+		leilaoDao.deleta(leilao);
+
+		assertNull(leilaoDao.porId(leilao.getId()));
+
 	}
 }
