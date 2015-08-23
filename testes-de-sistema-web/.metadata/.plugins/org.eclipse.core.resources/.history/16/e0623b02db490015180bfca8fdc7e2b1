@@ -1,0 +1,70 @@
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class UsuariosSystemMelhoradoTest {
+	private WebDriver driver;
+    private UsuariosPage usuarios;
+
+    @Before
+    public void inicializa() {
+        this.driver = new FirefoxDriver();
+        this.usuarios = new UsuariosPage(driver);
+    }
+
+    @Test
+    public void deveAdicionarUmUsuario() {
+
+        usuarios.visita();
+        usuarios.novo()
+        .cadastra("Ronaldo Luiz de Albuquerque", "ronaldo2009@terra.com.br");
+
+        assertTrue(usuarios.existeNaListagem(
+                "Ronaldo Luiz de Albuquerque", "ronaldo2009@terra.com.br"));
+
+    }
+    
+    
+    @Test
+    public void deveValidarNomeVazio() {
+        
+    	usuarios.visita();
+        assertFalse(usuarios.novo()
+                .cadastra("Ronaldo Luiz de Albuquerque", "ronaldo2009@terra.com.br").validaNome());
+        
+    }
+    
+    @Test
+    public void deveValidarNomeEmailVazio() {
+        
+    	usuarios.visita();
+        assertFalse(usuarios.novo()
+                .cadastra("", "").validaNome());
+        
+    }
+    
+    @Test
+    public void verificarLinkNovoUsuario() {
+        
+        driver.get("http://localhost:8080/usuarios");
+
+        WebElement link = driver.findElement(By.linkText("Novo Usuário"));
+        link.click();
+
+        assertTrue(driver.getPageSource().contains("Nome:"));
+        assertTrue(driver.getPageSource().contains("E-mail:"));
+        assertTrue(driver.getPageSource().contains("Salvar!"));
+        
+    }
+
+    @After
+    public void encerra() {
+        driver.close();
+    }
+}

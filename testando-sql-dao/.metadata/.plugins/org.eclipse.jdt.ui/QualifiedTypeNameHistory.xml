@@ -2,8 +2,8 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="br.com.caelum.pm73.dominio.Usuario"/>
 <fullyQualifiedTypeName name="java.util.Calendar"/>
-<fullyQualifiedTypeName name="br.com.caelum.pm73.dominio.Leilao"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="br.com.caelum.pm73.dao.LeilaoBuilder"/>
 <fullyQualifiedTypeName name="br.com.caelum.pm73.dominio.Lance"/>
+<fullyQualifiedTypeName name="br.com.caelum.pm73.dominio.Leilao"/>
 </qualifiedTypeNameHistroy>

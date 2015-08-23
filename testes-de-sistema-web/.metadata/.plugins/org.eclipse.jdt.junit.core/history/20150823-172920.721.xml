@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="UsuariosSystemTest" project="testes-de-sistema-selenium" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="UsuariosSystemTest" time="21.781">
+    <testcase name="deveValidarNomeVazio" classname="UsuariosSystemTest" time="6.406"/>
+    <testcase name="deveValidarNomeEmailVazio" classname="UsuariosSystemTest" time="4.767"/>
+    <testcase name="verificarLinkNovoUsuario" classname="UsuariosSystemTest" time="4.936"/>
+    <testcase name="deveAdicionarUmUsuario" classname="UsuariosSystemTest" time="5.672"/>
+  </testsuite>
+</testrun>
