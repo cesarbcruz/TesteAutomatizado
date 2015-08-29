@@ -35,6 +35,11 @@ class UsuariosPage {
         // confirma
         alert.accept();
      }
+    
+    public AlteraUsuarioPage altera(int posicao) {
+        driver.findElements(By.linkText("editar")).get(posicao-1).click();
+        return new AlteraUsuarioPage(driver);
+    }
    
 
 }

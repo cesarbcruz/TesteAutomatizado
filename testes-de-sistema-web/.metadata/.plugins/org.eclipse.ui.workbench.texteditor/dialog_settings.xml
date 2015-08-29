@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="Ronaldo Luiz de Albuquerque" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="Ronaldo Luiz de Albuquerque"/>
+			<item value="ronaldo2009@terra.com.br"/>
+			<item value="cadastra"/>
+			<item value="WebDriver driver = new FirefoxDriver();"/>
+			<item value="driver = new FirefoxDriver();"/>
+		</list>
+		<list key="replacehistory">
+			<item value="carloscruz@uol.com.br"/>
+			<item value="Carlos Cruz"/>
+			<item value=""/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="318" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="434" key="DIALOG_HEIGHT"/>
+		<item value="1205" key="DIALOG_X_ORIGIN"/>
+		<item value="221" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

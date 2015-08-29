@@ -1,0 +1,27 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class LeiloesSystemTest {
+	 private WebDriver driver;
+	    private LeiloesPage leiloes;
+
+	    @Before
+	    public void inicializa() {
+	        this.driver = new FirefoxDriver();
+	        leiloes = new LeiloesPage(driver);        
+	    }
+
+	    @Test
+	    public void deveCadastrarUmLeilao() {
+
+	        leiloes.visita();
+	        NovoLeilaoPage novoLeilao = leiloes.novo();
+	        novoLeilao.preenche("Geladeira", 123, "Paulo Henrique", true);
+
+	        assertTrue(leiloes.existe("Geladeira", 123, "Paulo Henrique", true));
+
+	    }
+}

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="UsuariosSystemMelhoradoTest" project="testes-de-sistema-selenium" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="UsuariosSystemMelhoradoTest" time="23.881">
-    <testcase name="deveValidarNomeVazio" classname="UsuariosSystemMelhoradoTest" time="7.1"/>
-    <testcase name="deveValidarNomeEmailVazio" classname="UsuariosSystemMelhoradoTest" time="5.273"/>
-    <testcase name="verificarLinkNovoUsuario" classname="UsuariosSystemMelhoradoTest" time="5.245"/>
-    <testcase name="deveAdicionarUmUsuario" classname="UsuariosSystemMelhoradoTest" time="6.263"/>
-  </testsuite>
-</testrun>

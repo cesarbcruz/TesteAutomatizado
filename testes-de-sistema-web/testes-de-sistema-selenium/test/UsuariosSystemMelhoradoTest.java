@@ -15,6 +15,7 @@ public class UsuariosSystemMelhoradoTest {
     public void inicializa() {
         this.driver = new FirefoxDriver();
         this.usuarios = new UsuariosPage(driver);
+        driver.get("http://localhost:8080/apenas-teste/limpa");
     }
 
     @Test
@@ -27,8 +28,6 @@ public class UsuariosSystemMelhoradoTest {
         assertTrue(usuarios.existeNaListagem(
                 "Ronaldo Luiz de Albuquerque", "ronaldo2009@terra.com.br"));
         
-        usuarios.deletaUsuarioNaPosicao(2);
-
     }
     
     
@@ -67,10 +66,22 @@ public class UsuariosSystemMelhoradoTest {
         assertTrue(usuarios.existeNaListagem
                 ("Carlos Cruz", "carloscruz@uol.com.br"));
 
-        usuarios.deletaUsuarioNaPosicao(2);
+        usuarios.deletaUsuarioNaPosicao(1);
 
         assertFalse(usuarios.existeNaListagem("Carlos Cruz", "carloscruz@uol.com.br"));
 
+    }
+    
+    
+    @Test
+    public void deveAlterarUmUsuario() {
+    	usuarios.visita();
+        usuarios.novo().cadastra("Ronaldo", "ronaldo@terra.com.br");
+        usuarios.altera(1).para("José da Cruz", "jose@cruz.com");
+
+        assertFalse(usuarios.existeNaListagem(
+                "Ronaldo", "ronaldo@terra.com.br"));
+        assertTrue(usuarios.existeNaListagem("José da Cruz", "jose@cruz.com"));
     }
     
     @After

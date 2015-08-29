@@ -1,0 +1,92 @@
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class UsuariosSystemMelhoradoTest {
+	private WebDriver driver;
+    private UsuariosPage usuarios;
+
+    @Before
+    public void inicializa() {
+        this.driver = new FirefoxDriver();
+        this.usuarios = new UsuariosPage(driver);
+    }
+
+    @Test
+    public void deveAdicionarUmUsuario() {
+
+        usuarios.visita();
+        usuarios.novo()
+        .cadastra("Ronaldo Luiz de Albuquerque", "ronaldo2009@terra.com.br");
+
+        assertTrue(usuarios.existeNaListagem(
+                "Ronaldo Luiz de Albuquerque", "ronaldo2009@terra.com.br"));
+        
+        usuarios.deletaUsuarioNaPosicao(2);
+
+    }
+    
+    
+    @Test
+    public void deveValidarNomeVazio() {
+        
+    	usuarios.visita();
+        assertTrue(usuarios.novo()
+                .cadastra("", "ronaldo2009@terra.com.br").validaNome());
+        
+    }
+    
+    @Test
+    public void deveValidarNomeEmailVazio() {
+        
+    	usuarios.visita();
+        assertTrue(usuarios.novo()
+                .cadastra("", "").validaNomeEmail());
+        
+    }
+    
+    @Test
+    public void verificarLinkNovoUsuario() {
+    	usuarios.visita();
+    	usuarios.novo();
+        assertTrue(driver.getPageSource().contains("Nome:"));
+        assertTrue(driver.getPageSource().contains("E-mail:"));
+        assertTrue(driver.getPageSource().contains("Salvar!"));
+    }
+
+    @Test
+    public void deveDeletarUmUsuario() {
+    	usuarios.visita();
+        usuarios.novo()
+        .cadastra("Carlos Cruz", "carloscruz@uol.com.br");
+        assertTrue(usuarios.existeNaListagem
+                ("Carlos Cruz", "carloscruz@uol.com.br"));
+
+        usuarios.deletaUsuarioNaPosicao(2);
+
+        assertFalse(usuarios.existeNaListagem("Carlos Cruz", "carloscruz@uol.com.br"));
+
+    }
+    
+    
+    @Test
+    public void deveAlterarUmUsuario() {
+usuarios.visita();
+        usuarios.novo().cadastra("Ronaldo Luiz de Albuquerque", "ronaldo2009@terra.com.br");
+    usuarios.altera(1).para("José da Silva", "jose@silva.com");
+
+        assertFalse(usuarios.existeNaListagem(
+                "Ronaldo Luiz de Albuquerque", "ronaldo2009@terra.com.br"));
+        assertTrue(usuarios.existeNaListagem("José da Silva", "jose@silva.com"));
+    }
+    
+    @After
+    public void encerra() {
+        driver.close();
+    }
+}
