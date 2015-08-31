@@ -1,0 +1,25 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+public class DetalhesDoLeilaoPage {
+
+    private WebDriver driver;
+
+    public DetalhesDoLeilaoPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void lance(String usuario, double valor) {
+        WebElement txtValor = driver.findElement(By.name("lance.valor"));
+        WebElement combo = driver.findElement(By.name("lance.usuario.id"));
+        Select cbUsuario = new Select(combo);
+
+        cbUsuario.selectByVisibleText(usuario);
+        txtValor.sendKeys(String.valueOf(valor));
+
+        driver.findElement(By.id("btnDarLance")).click();
+    }
+
+}

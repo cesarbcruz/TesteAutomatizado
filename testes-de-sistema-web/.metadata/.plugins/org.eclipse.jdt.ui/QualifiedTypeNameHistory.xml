@@ -8,4 +8,5 @@
 <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.Alert"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.server.browserlaunchers.Sleeper"/>
+<fullyQualifiedTypeName name="AlteraUsuarioPage"/>
 </qualifiedTypeNameHistroy>
