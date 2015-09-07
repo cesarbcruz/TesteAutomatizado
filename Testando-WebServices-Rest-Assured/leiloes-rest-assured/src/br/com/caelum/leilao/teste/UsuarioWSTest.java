@@ -11,6 +11,7 @@ import org.junit.Test;
 
 import br.com.caelum.leilao.modelo.Usuario;
 
+import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.path.json.JsonPath;
 import com.jayway.restassured.path.xml.XmlPath;
 
@@ -26,6 +27,9 @@ public class UsuarioWSTest {
 				"mauricio.aniche@caelum.com.br");
 		guilherme = new Usuario(2L, "Guilherme Silveira",
 				"guilherme.silveira@caelum.com.br");
+		
+
+		//RestAssured.baseURI="informar endereço base se precisar";
 	
 	}
 
@@ -46,7 +50,7 @@ public class UsuarioWSTest {
     public void deveRetornarUsuarioPeloId() {
         
     	JsonPath path = given()
-                .queryParam("usuario.id", 1)
+                .parameter("usuario.id", 1)
                 .header("Accept", "application/json")
                 .get("/usuarios/show")
                 .andReturn().jsonPath();
@@ -96,4 +100,25 @@ public class UsuarioWSTest {
 
     }
 
+    
+    @Test
+    public void deveDeletarUmUsuario() {
+    Usuario joao = new Usuario("Joao da Silva", "joao@dasilva.com");
+    XmlPath retorno = given()
+    .header("Accept", "application/xml")
+    .contentType("application/xml")
+    .body(joao)
+    .expect().statusCode(200)
+    .when().post("/usuarios")
+    .andReturn().xmlPath();
+
+    Usuario resposta = retorno.getObject("usuario", Usuario.class);
+    assertEquals("Joao da Silva", resposta.getNome());
+    assertEquals("joao@dasilva.com", resposta.getEmail());
+    // deletando aqui 
+    given()
+    .contentType("application/xml").body(resposta)
+    .expect().statusCode(200)
+    .when().delete("/usuarios/deleta").andReturn().asString();
+    }
 }
