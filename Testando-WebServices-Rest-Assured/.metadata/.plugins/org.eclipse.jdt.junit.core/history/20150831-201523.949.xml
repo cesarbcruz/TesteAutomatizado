@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="LeilaoWSTest" project="leiloes-rest-assured" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="br.com.caelum.leilao.teste.LeilaoWSTest" time="3.122">
-    <testcase name="deveRetornarLeilaoPeloId" classname="br.com.caelum.leilao.teste.LeilaoWSTest" time="2.959"/>
-    <testcase name="deveRetornarNumeroDeLeiloes" classname="br.com.caelum.leilao.teste.LeilaoWSTest" time="0.163"/>
-  </testsuite>
-</testrun>

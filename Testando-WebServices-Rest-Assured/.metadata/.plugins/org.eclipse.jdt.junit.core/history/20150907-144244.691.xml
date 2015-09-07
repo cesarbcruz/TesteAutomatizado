@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="OutrosTest" project="leiloes-rest-assured" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="br.com.caelum.leilao.teste.OutrosTest" time="2.533">
-    <testcase name="deveGerarUmCookie" classname="br.com.caelum.leilao.teste.OutrosTest" time="2.432"/>
-    <testcase name="deveGerarUmHeader" classname="br.com.caelum.leilao.teste.OutrosTest" time="0.101"/>
-  </testsuite>
-</testrun>

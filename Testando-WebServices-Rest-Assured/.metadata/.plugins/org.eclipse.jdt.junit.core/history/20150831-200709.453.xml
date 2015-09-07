@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="UsuarioWSTest" project="leiloes-rest-assured" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="br.com.caelum.leilao.teste.UsuarioWSTest" time="3.303">
-    <testcase name="deveRetornarUsuarioPeloId" classname="br.com.caelum.leilao.teste.UsuarioWSTest" time="2.243"/>
-    <testcase name="deveRetornarListaComTodosUsuarios" classname="br.com.caelum.leilao.teste.UsuarioWSTest" time="0.461"/>
-    <testcase name="deveRetornarListaDeUsuarios" classname="br.com.caelum.leilao.teste.UsuarioWSTest" time="0.197"/>
-    <testcase name="deveAdicionarUmUsuario" classname="br.com.caelum.leilao.teste.UsuarioWSTest" time="0.402"/>
-  </testsuite>
-</testrun>
